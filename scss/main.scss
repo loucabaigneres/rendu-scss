@@ -1,0 +1,24 @@
+@use "abstracts/variables" as *;
+@use "abstracts/mixins" as *;
+
+@use "base/reset";
+@use "base/typography";
+
+@use "components/buttons";
+
+@use "layout/header";
+@use "layout/navigation";
+@use "layout/accroche";
+@use "layout/menu";
+@use "layout/preparations";
+@use "layout/form";
+@use "layout/footer";
+
+body {
+    background-color: $white;
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+}

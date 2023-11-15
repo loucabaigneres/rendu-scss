@@ -1,0 +1,101 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../base/typography" as *;
+
+section.menu {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "heading-section heading-section"
+        "left-section right-section";
+    gap: 32px;
+    padding: 48px;
+
+    .heading-section {
+        grid-area: heading-section;
+        justify-self: center;
+        width: 80%;
+        @include display-flex($direction: column);
+        gap: 16px;
+
+        h2 {
+            font-size: $size * 2;
+            color: $brand-color;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+
+    & > div {
+        @include display-flex($direction: column);
+    }
+
+    .left-section {
+        grid-area: left-section;
+        gap: 16px;
+
+        .menu-group {
+            width: 100%;
+            @include display-flex($direction: column, $align: flex-start);
+            gap: 4px;
+            padding: 4px;
+
+            &__header {
+                width: 100%;
+                @include display-flex($justify: space-between);
+
+                h4 {
+                    color: $brand-color;
+                }
+            }
+        }
+
+        .menu-group-special {
+            position: relative;
+            border: 1px solid $brand-color;
+
+            .best-seller {
+                height: 24px;
+                position: absolute;
+                top: -24px;
+                right: 0;
+                background-color: $brand-color;
+                @include display-flex();
+                padding-inline: 8px;
+
+                h5 {
+                    color: $white;
+                    font-weight: 300;
+                    font-size: $size / 1.5;
+                }
+            }
+        }
+    }
+
+    .right-section {
+        grid-area: right-section;
+        gap: 64px;
+
+        .texts-rotated {
+            @include display-flex($direction: column);
+            gap: 4px;
+
+            h3 {
+                rotate: -9deg;
+                font-size: $size * 2.5;
+                font-weight: 400;
+            }
+
+            .title-green {
+                color: $brand-color;
+            }
+
+            .title-blue {
+                color: $secondary-brand-color;
+            }
+        }
+    }
+}

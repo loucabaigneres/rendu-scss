@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../base/typography" as *;
+
+.accroche {
+    position: relative;
+    background-image: url("../../assets/ismael-trevino-NDyuR4Huig8-unsplash.png");
+    background-repeat: no-repeat;
+
+    .preparation {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 50px;
+        background-color: $brand-color;
+        width: 50%;
+        @include display-flex($direction: column, $justify: center);
+        gap: 32px;
+        padding: 32px;
+        opacity: 0.85;
+
+        h2 {
+            font-size: $size * 2;
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+        }
+    }
+}

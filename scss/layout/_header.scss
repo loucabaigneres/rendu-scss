@@ -1,0 +1,61 @@
+@use "../abstracts/mixins" as *;
+
+.header {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../assets/Header_back.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include display-flex($direction: column, $justify: space-between);
+    align-content: space-between;
+    padding: 24px;
+
+    .background-opacity {
+        position: absolute;
+        z-index: 9;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+            to right,
+            rgba(96, 160, 216, 0.62),
+            rgba(179, 210, 52, 0.62)
+        );
+    }
+
+    .tagline {
+        z-index: 10;
+        position: relative;
+        @include display-flex($direction: column);
+        gap: 8px;
+
+        &__title {
+            font-size: 6em;
+            font-weight: 500;
+        }
+
+        &__subtitle {
+            position: absolute;
+            right: -20%;
+            bottom: -10%;
+            font-size: 2em;
+            font-weight: 400;
+            font-style: italic;
+            rotate: -9deg;
+        }
+    }
+
+    .socials {
+        z-index: 10;
+        @include display-flex($justify: flex-start);
+        gap: 16px;
+        align-self: flex-end;
+
+        &__icon {
+            width: 32px;
+            height: 32px;
+        }
+    }
+}

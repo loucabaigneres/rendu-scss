@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+footer {
+    width: 100%;
+    background-color: $brand-color;
+    @include display-flex($justify: space-between);
+    padding: 32px;
+
+    &__logo {
+        width: 180px;
+    }
+
+    div {
+        @include display-flex($direction: column, $justify: flex-start);
+
+        h2 {
+            margin-bottom: 16px;
+        }
+    }
+}

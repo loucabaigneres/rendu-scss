@@ -1,0 +1,31 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "../base/typography" as *;
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    img {
+        width: 262px;
+    }
+
+    &__right {
+        @include display-flex($direction: column, $justify: flex-start);
+        gap: 16px;
+
+        .heading-form {
+            @include display-flex($direction: column);
+            gap: 16px;
+        }
+
+        form {
+            width: 100%;
+            height: auto;
+
+            .names {
+                @include display-flex($direction: column, $align: flex-start);
+            }
+        }
+    }
+}

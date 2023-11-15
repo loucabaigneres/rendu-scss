@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as *;
+@use "../base/typography" as *;
+
+.button {
+    font-size: $size * 1.2;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 32px;
+    cursor: pointer;
+    background-color: $brand-color;
+    color: $white;
+}
+
+.button-invert {
+    background-color: $white;
+    color: $brand-color;
+}
+
+.nav__button {
+    font-size: $size;
+}
