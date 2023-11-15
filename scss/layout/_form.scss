@@ -13,6 +13,7 @@
     &__right {
         @include display-flex($direction: column, $justify: flex-start);
         gap: 16px;
+        padding: 48px;
 
         .heading-form {
             @include display-flex($direction: column);
@@ -23,8 +24,20 @@
             width: 100%;
             height: auto;
 
-            .names {
+            .form-input {
                 @include display-flex($direction: column, $align: flex-start);
+
+                input {
+                    width: 100%;
+                }
+            }
+
+            .names {
+                @include display-flex($justify: space-between, $align: center);
+
+                input {
+                    width: 100%;
+                }
             }
         }
     }

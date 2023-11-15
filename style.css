@@ -294,6 +294,7 @@ section.menu .right-section .texts-rotated .title-blue {
   justify-content: flex-start;
   align-items: center;
   gap: 16px;
+  padding: 48px;
 }
 .form__right .heading-form {
   display: flex;
@@ -306,11 +307,23 @@ section.menu .right-section .texts-rotated .title-blue {
   width: 100%;
   height: auto;
 }
-.form__right form .names {
+.form__right form .form-input {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+.form__right form .form-input input {
+  width: 100%;
+}
+.form__right form .names {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.form__right form .names input {
+  width: 100%;
 }
 
 footer {
