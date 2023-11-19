@@ -6,10 +6,11 @@
 
     @media screen and (max-width: 992px) {
         @include display-flex(
-            $direction: row,
+            $direction: column,
             $justify: space-between,
             $align: center
         );
+        gap: 24px;
     }
 
     @media screen and (max-width: 768px) {
@@ -23,7 +24,7 @@
     #cross {
         display: none;
 
-        @media screen and (max-width: 992px) {
+        @media screen and (max-width: 768px) {
             display: flex;
 
             #burger {

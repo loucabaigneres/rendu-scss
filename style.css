@@ -120,6 +120,12 @@ p {
     flex-direction: column;
   }
 }
+@media screen and (max-width: 768px) {
+  .header {
+    height: 100vh;
+    padding: 24px;
+  }
+}
 .header .background-opacity {
   position: absolute;
   z-index: 7;
@@ -742,9 +748,10 @@ footer div p {
 @media screen and (max-width: 992px) {
   .menu {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    gap: 24px;
   }
 }
 @media screen and (max-width: 992px) and (max-width: 768px) {
@@ -763,7 +770,7 @@ footer div p {
 .menu #cross {
   display: none;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   .menu #cross {
     display: flex;
   }
