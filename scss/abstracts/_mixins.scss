@@ -3,4 +3,8 @@
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 }

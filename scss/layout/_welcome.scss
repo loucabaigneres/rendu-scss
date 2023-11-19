@@ -1,0 +1,48 @@
+.welcome {
+    background-image: url("../../assets/61842.png");
+    background-repeat: repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-inline: 48px;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        padding: 48px 24px;
+    }
+
+    &__text {
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        @include display-flex($direction: column, $align: start);
+        gap: 48px;
+
+        @media screen and (max-width: 768px) {
+            @include display-flex($justify: start);
+        }
+
+        h2 {
+            color: $brand-color;
+            @media screen and (max-width: 768px) {
+                text-align: center;
+            }
+        }
+    }
+
+    &__img {
+        position: relative;
+        z-index: 9;
+        height: 100%;
+
+        @media screen and (max-width: 768px) {
+            display: none;
+        }
+
+        img {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -20%;
+        }
+    }
+}

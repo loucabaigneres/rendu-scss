@@ -1,51 +1,54 @@
-@use "../abstracts/mixins" as *;
-@use "../abstracts/variables" as *;
-@use "../base/typography" as *;
-
 .preparations {
     background-image: url("../../assets/louis-hansel-MlPD-AzZYMg-unsplash.png");
     background-repeat: no-repeat;
+    background-size: cover;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 16px;
-    padding: 128px 32px;
+    gap: 32px;
+    padding: 128px 64px;
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 64px 32px;
+    }
 
     &__group {
-        display: grid;
-        grid-template-areas:
-            "title title"
-            "left right";
-        justify-content: center;
-        gap: 16px;
-        opacity: 0.85;
+        @include display-flex($direction: column, $justify: start);
+        gap: 64px;
+        padding: 64px;
+        container-name: meals;
+        container-type: inline-size;
 
         h2 {
-            font-size: $size * 2;
             grid-area: title;
-            justify-self: center;
-            align-self: center;
-            color: $white;
-        }
-
-        p {
             text-align: center;
             color: $white;
         }
 
-        .meals__left {
-            grid-area: left;
-        }
+        .meals {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 64px;
+            row-gap: 8px;
 
-        .meals__right {
-            grid-area: right;
+            @container meals (max-width: 576px) {
+                grid-template-columns: 1fr;
+            }
+
+            p {
+                text-align: center;
+                color: $white;
+                white-space: nowrap;
+            }
         }
     }
 
     &__green {
-        background-color: $brand-color;
+        background-color: rgba($brand-color, 0.85);
     }
 
     &__blue {
-        background-color: $secondary-brand-color;
+        background-color: rgba($secondary-brand-color, 0.85);
     }
 }

@@ -9,28 +9,40 @@
     </head>
     <body>
         <header class="header">
-            <div class="background-opacity"></div>
             <nav class="menu">
                 <img
                     src="assets/Logo.png"
                     alt="Logo Mongoo"
                     class="menu__logo"
                 />
+                <!-- <a id="cross" href="#"><span id="burger"></span></a> -->
                 <ul class="menu__list">
-                    <a href="#"><li class="list__item">Accueil</li></a>
-                    <a href="#"
-                        ><li class="list__item">Qui sommes-nous ?</li></a
-                    >
-                    <a href="#"><li class="list__item">Menu</li></a>
-                    <a href="#"><li class="list__item">Contact</li></a>
+                    <li class="list__item active">
+                        <a href="">Accueil</a>
+                        <div class="active__underline"></div>
+                    </li>
+                    <li class="list__item inactive">
+                        <a href="">Qui sommes-nous ?</a>
+                        <div class="inactive__underline"></div>
+                    </li>
+                    <li class="list__item inactive">
+                        <a href="">Menu</a>
+                        <div class="inactive__underline"></div>
+                    </li>
+                    <li class="list__item inactive">
+                        <a href="">Contact</a>
+                        <div class="inactive__underline"></div>
+                    </li>
+                    <li class="list__item">
+                        <button class="button button-invert nav__button">
+                            Commander
+                        </button>
+                    </li>
                 </ul>
-                <button class="button button-invert nav__button">
-                    Commander
-                </button>
             </nav>
             <div class="tagline">
                 <h1 class="tagline__title">mongoo</h1>
-                <h2 class="tagline__subtitle">C'est frais pour vous !</h2>
+                <h3 class="tagline__subtitle">C'est frais pour vous !</h3>
             </div>
             <div class="socials">
                 <img
@@ -50,6 +62,27 @@
                 />
             </div>
         </header>
+        <section class="welcome">
+            <div class="welcome__text">
+                <h2>Une salade sur mesure</h2>
+                <p>
+                    MONGOO vous permet de composer votre salade selon vos envies
+                    et vos goûts.
+                    <br />
+                    <br />
+                    Une quarantaine d'ingrédients frais et préparés le matin
+                    même sur place vous sont proposés au quotidien.
+                    <br />
+                    <br />
+                    Depuis maintenant 10 ans, MONGOO fait le bonheur des
+                    gourmets et des gourmands, alors pourquoi pas vous ?
+                </p>
+                <button class="button">En savoir +</button>
+            </div>
+            <div class="welcome__img">
+                <img src="assets/salade-detoure.png" alt="" />
+            </div>
+        </section>
         <section class="accroche">
             <div class="preparation">
                 <h2>
@@ -58,14 +91,21 @@
                     et avec amour
                 </h2>
                 <p>
-                    Chez MONGOO, tous les ingrédients et tous les desserts sont
+                    Chez MONGOO,
+                    <span class="underline">tous les ingrédients</span> et
+                    <span class="underline">tous les desserts</span> sont
                     préparés sur place.
                     <br />
+                    <br />
                     Nous mettons un point d'honneur à ce que tous les matins,
-                    nos équipes de super-préparateurs découpent, tranchent,
-                    épluchent, assaisonnent, mélangent, émincent, saupoudrent et
-                    préparent tout ce qu'il y a sur le bar afin de vous proposer
-                    les meilleures combinaisons de salades possible.
+                    nos équipes de super-préparateurs
+                    <span class="semibold"
+                        >découpent, tranchent, épluchent, assaisonnent,
+                        mélangent, émincent, saupoudrent</span
+                    >
+                    et préparent tout ce qu'il y a sur le bar afin de vous
+                    proposer les meilleures combinaisons de salades possible.
+                    <br />
                     <br />
                     Alors faites votre choix !
                 </p>
@@ -81,6 +121,7 @@
                     <br />
                     Mais attention, pas n'importe quelle boisson et n'importe
                     quel dessert...
+                    <br />
                     <br />
                     Découvrez notre large sélection de boissons et desserts pour
                     accompagner votre repas
@@ -161,55 +202,55 @@
         <section class="preparations">
             <div class="preparations__group preparations__green">
                 <h2>Chez les verts</h2>
-                <div class="meals-left">
+                <div class="meals">
                     <p>Croutons</p>
-                    <p>Oeufs</p>
-                    <p>Betteraves</p>
-                    <p>Carottes</p>
-                    <p>Choux rouges</p>
-                    <p>Concombres</p>
-                    <p>Lentilles</p>
-                    <p>Maïs</p>
-                    <p>Oignons rouges</p>
-                </div>
-                <div class="meals-right">
                     <p>Radis</p>
+                    <p>Oeufs</p>
                     <p>Pommes</p>
+                    <p>Betteraves</p>
                     <p>Oignons frits</p>
+                    <p>Carottes</p>
                     <p>Emmental</p>
+                    <p>Choux rouges</p>
                     <p>Mozzarella</p>
+                    <p>Concombre</p>
                     <p>Mimolette</p>
+                    <p>Lentilles</p>
                     <p>Surimi</p>
+                    <p>Maïs</p>
                     <p>Saucisse</p>
+                    <p>Oignons rouges</p>
                 </div>
             </div>
             <div class="preparations__group preparations__blue">
                 <h2>Chez les bleus</h2>
-                <div class="meals meals__left">
+                <div class="meals">
                     <p>Aubergine</p>
-                    <p>Avocat</p>
-                    <p>Cantal</p>
-                    <p>Cœur d'artichaut</p>
-                    <p>Grana Panado</p>
-                    <p>Jambon cru</p>
-                    <p>Crevettes</p>
-                </div>
-                <div class="meals meals__right">
                     <p>Fêta</p>
+                    <p>Avocat</p>
                     <p>Melon</p>
+                    <p>Cantal</p>
                     <p>Œuf poché</p>
+                    <p>Cœur d'artichaut</p>
                     <p>Poivrons</p>
+                    <p>Grana Panado</p>
                     <p>Thon</p>
+                    <p>Jambon cru</p>
                     <p>Tomates cerises</p>
+                    <p>Crevettes</p>
                     <p>Tomates séchées</p>
                 </div>
             </div>
         </section>
         <section class="form">
-            <img src="assets/anh-nguyen-_Uqj5BQb-mw-unsplash.png" alt="" />
+            <div class="form__left">
+                <img src="assets/anh-nguyen-_Uqj5BQb-mw-unsplash.png" alt="" />
+                <div class="line line-horizontal"></div>
+                <div class="line line-vertical"></div>
+            </div>
             <div class="form__right">
                 <div class="heading-form">
-                    <h3>Envie de partager ?</h3>
+                    <h2>Envie de partager ?</h2>
                     <p>
                         Toute l'année, on recrute des employés motivés <br />
                         pour tous nos restaurants !
@@ -218,30 +259,34 @@
                     </p>
                 </div>
                 <form action="">
-                    <div class="names">
-                        <div class="form-input name">
-                            <label for="name">Nom</label>
-                            <input type="text" name="name" />
-                        </div>
-                        <div class="form-input first-name">
-                            <label for="first-name">Prénom</label>
-                            <input type="text" name="first-name" />
-                        </div>
+                    <div class="form-input">
+                        <label for="name">Nom</label>
+                        <input name="name" type="text" />
                     </div>
-                    <div class="form-input email">
+                    <div class="form-input">
+                        <label for="first-name">Prénom</label>
+                        <input name="first-name" type="text" />
+                    </div>
+                    <div class="form-input span">
                         <label for="email">Email</label>
-                        <input type="text" name="email" />
+                        <input name="email" type="text" />
                     </div>
-                    <div class="form-input motivation">
+                    <div class="form-input span">
                         <label for="motivation"
                             >Votre motivation en quelques mots</label
                         >
                         <textarea
-                            id=""
-                            class="motivation"
-                            cols="30"
-                            rows="10"
+                            name="motivation"
+                            id="motivation"
+                            rows="6"
                         ></textarea>
+                    </div>
+                    <div class="form-input form-input-button span">
+                        <input
+                            class="button form-button"
+                            type="button"
+                            value="Postuler"
+                        />
                     </div>
                 </form>
             </div>
@@ -249,19 +294,19 @@
         <footer>
             <img src="assets/Logo.png" alt="" class="footer__logo" />
             <div>
-                <h2>Commander</h2>
+                <h4>Commander</h4>
                 <p>Passer commande</p>
                 <p>Nos menus</p>
                 <p>Restaurants</p>
             </div>
             <div>
-                <h2>Informations</h2>
+                <h4>Informations</h4>
                 <p>F.A.Q</p>
                 <p>Mentions légales</p>
                 <p>Recrutement</p>
             </div>
             <div>
-                <h2>Nous retrouver</h2>
+                <h4>Nous retrouver</h4>
                 <p>Facebook</p>
                 <p>Twitter</p>
                 <p>Instagram</p>

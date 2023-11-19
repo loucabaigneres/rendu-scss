@@ -1,24 +1,32 @@
-@use "abstracts/variables" as *;
-@use "abstracts/mixins" as *;
+@import "abstracts/variables";
+@import "abstracts/mixins";
 
-@use "base/reset";
-@use "base/typography";
+@import "base/reset";
+@import "base/typography";
 
-@use "components/buttons";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/welcome";
+@import "layout/accroche";
+@import "layout/menu";
+@import "layout/preparations";
+@import "layout/form";
+@import "layout/footer";
 
-@use "layout/header";
-@use "layout/navigation";
-@use "layout/accroche";
-@use "layout/menu";
-@use "layout/preparations";
-@use "layout/form";
-@use "layout/footer";
+@import "components/buttons";
 
 body {
     background-color: $white;
+    width: 100vw;
+    overflow-x: hidden;
 }
 
+.header,
 section {
-    width: 100vw;
-    height: 100vh;
+    max-width: 100vw;
+    min-height: 100vh;
+
+    @media screen and (max-width: 768px) {
+        min-height: auto;
+    }
 }

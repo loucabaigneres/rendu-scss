@@ -1,21 +1,31 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
-
 footer {
     width: 100%;
     background-color: $brand-color;
-    @include display-flex($justify: space-between);
+    @include display-flex($justify: space-around);
+    gap: 48px;
+    flex-wrap: wrap;
     padding: 32px;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: row;
+        justify-content: center;
+        padding: 48px 32px;
+    }
 
     &__logo {
         width: 180px;
     }
 
     div {
-        @include display-flex($direction: column, $justify: flex-start);
+        @include display-flex($direction: column, $justify: center);
 
-        h2 {
-            margin-bottom: 16px;
+        h4 {
+            margin-bottom: 8px;
+            color: $white;
+        }
+
+        p {
+            color: $white;
         }
     }
 }

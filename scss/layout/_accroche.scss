@@ -1,31 +1,46 @@
-@use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
-@use "../base/typography" as *;
-
 .accroche {
     position: relative;
+    z-index: 10;
     background-image: url("../../assets/ismael-trevino-NDyuR4Huig8-unsplash.png");
     background-repeat: no-repeat;
+    background-size: cover;
+    @include display-flex($justify: end, $align: center);
+    padding-inline: 64px;
+
+    @media screen and (max-width: 992px) {
+        padding: 32px;
+        justify-content: center;
+    }
 
     .preparation {
-        position: absolute;
-        transform: translateY(-50%);
-        top: 50%;
-        right: 50px;
-        background-color: $brand-color;
+        background-color: rgba($brand-color, 0.85);
         width: 50%;
         @include display-flex($direction: column, $justify: center);
-        gap: 32px;
+        gap: 48px;
         padding: 32px;
-        opacity: 0.85;
+
+        @media screen and (max-width: 992px) {
+            width: 100%;
+        }
 
         h2 {
-            font-size: $size * 2;
             text-align: center;
+            color: $white;
         }
 
         p {
             text-align: center;
+            color: $white;
+
+            .underline {
+                color: $white;
+                text-decoration: underline;
+            }
+
+            .semibold {
+                color: $white;
+                font-weight: 600;
+            }
         }
     }
 }
