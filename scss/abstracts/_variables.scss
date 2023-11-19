@@ -1,7 +1,12 @@
 // Colors
 
-$white: #fff;
-$black: #000;
-$grey: #606060;
+$color-light: #fff;
+$color-grey: #616161;
+$color-dark: #000;
 $brand-color: #b2d234;
 $secondary-brand-color: #60a0d8;
+
+$clr-primary-text: $color-light;
+$clr-secondary-text: $color-dark;
+$clr-primary-bg: $color-light;
+$clr-shadow: $color-grey;

@@ -29,7 +29,7 @@ section.menu {
 
         @media screen and (max-width: 768px) {
             width: 100%;
-            text-align: center;            
+            text-align: center;
         }
 
         h2 {
@@ -61,11 +61,11 @@ section.menu {
 
             @media screen and (max-width: 768px) {
             }
-            
+
             &__header {
                 width: 100%;
                 @include display-flex($justify: space-between);
-                
+
                 @media screen and (max-width: 768px) {
                     flex-direction: row;
                     flex-wrap: wrap;
@@ -93,7 +93,7 @@ section.menu {
                 padding-inline: 8px;
 
                 h5 {
-                    color: $white;
+                    color: $clr-primary-text;
                     font-weight: 300;
                     font-size: calc($size / 1.5);
                 }

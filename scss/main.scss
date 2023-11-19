@@ -1,11 +1,11 @@
 @import "abstracts/variables";
 @import "abstracts/mixins";
+@import "abstracts/placeholders";
 
 @import "base/reset";
 @import "base/typography";
 
 @import "layout/header";
-@import "layout/navigation";
 @import "layout/welcome";
 @import "layout/accroche";
 @import "layout/menu";
@@ -13,10 +13,12 @@
 @import "layout/form";
 @import "layout/footer";
 
+@import "components/nav";
 @import "components/buttons";
+@import "components/inputs";
 
 body {
-    background-color: $white;
+    background-color: $clr-primary-bg;
     width: 100vw;
     overflow-x: hidden;
 }

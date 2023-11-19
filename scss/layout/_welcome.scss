@@ -12,7 +12,7 @@
 
     &__text {
         position: relative;
-        z-index: 10;
+        z-index: 8;
         width: 100%;
         @include display-flex($direction: column, $align: start);
         gap: 48px;
@@ -31,7 +31,7 @@
 
     &__img {
         position: relative;
-        z-index: 9;
+        z-index: 7;
         height: 100%;
 
         @media screen and (max-width: 768px) {

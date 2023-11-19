@@ -1,0 +1,132 @@
+.menu {
+    z-index: 10;
+    width: 100%;
+    height: 64px;
+    @include display-flex($justify: space-between);
+
+    @media screen and (max-width: 992px) {
+        @include display-flex(
+            $direction: row,
+            $justify: space-between,
+            $align: center
+        );
+    }
+
+    @media screen and (max-width: 768px) {
+        flex-direction: row;
+    }
+
+    &__logo {
+        width: 180px;
+    }
+
+    #cross {
+        display: none;
+
+        @media screen and (max-width: 992px) {
+            display: flex;
+
+            #burger {
+                width: 40px;
+                height: 4px;
+                border-radius: 5px;
+                background: $clr-primary-bg;
+                display: inline-block;
+                position: relative;
+                z-index: 10;
+            }
+
+            #burger::before,
+            #burger::after {
+                content: "";
+                width: 40px;
+                height: 4px;
+                border-radius: 5px;
+                background: $clr-primary-bg;
+                display: inline-block;
+                position: absolute;
+                transform-origin: center;
+                transition: all 0.3s ease;
+            }
+
+            #burger::before {
+                top: -10px;
+            }
+
+            #burger::after {
+                top: 10px;
+            }
+
+            #burger.cross-it {
+                background: transparent;
+            }
+
+            #burger.cross-it::before {
+                transform: rotate(45deg);
+                top: 0;
+            }
+
+            #burger.cross-it::after {
+                transform: rotate(-45deg);
+                top: 0;
+            }
+        }
+    }
+
+    &__list {
+        @include display-flex($justify: flex-start);
+        gap: 48px;
+
+        @media screen and (max-width: 768px) {
+            width: 100vw;
+            height: 0;
+            background-color: rgba($color: #000000, $alpha: 0.3);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            z-index: 9;
+            top: 100px;
+            left: 0;
+            overflow: clip;
+            transition: 0.3s;
+        }
+
+        li {
+            white-space: nowrap;
+            color: $clr-primary-text;
+        }
+    }
+
+    .opened {
+        display: flex;
+        height: calc(100vh - 88px);
+        padding-top: 48px;
+    }
+}
+
+.active {
+    $parent: &;
+    @extend %active;
+
+    &__underline {
+        width: 60%;
+        @extend %underline;
+
+        #{$parent}:hover & {
+            width: 100%;
+        }
+    }
+}
+
+.inactive {
+    $parent: &;
+    @extend %active;
+
+    &__underline {
+        width: 0;
+        @extend %underline;
+
+        #{$parent}:hover & {
+            width: 50%;
+        }
+    }
+}

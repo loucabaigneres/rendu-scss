@@ -1,17 +1,10 @@
 .button {
+    @extend %button;
     font-size: calc($size * 1.2);
-    font-weight: 600;
-    outline: none;
-    border: none;
-    border-radius: 4px;
-    padding: 12px 32px;
-    cursor: pointer;
-    background-color: $brand-color;
-    color: $white;
 }
 
 .button-invert {
-    background-color: $white;
+    background-color: $clr-primary-text;
     color: $brand-color;
 }
 

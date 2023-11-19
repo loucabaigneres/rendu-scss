@@ -1,0 +1,14 @@
+label {
+    color: $brand-color;
+    font-style: italic;
+    font-weight: 400;
+}
+
+input[type="text"] {
+    @extend %basic-input;
+}
+
+textarea {
+    @extend %basic-input;
+    resize: none;
+}

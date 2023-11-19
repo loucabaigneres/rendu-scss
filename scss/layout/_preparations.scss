@@ -23,7 +23,7 @@
         h2 {
             grid-area: title;
             text-align: center;
-            color: $white;
+            color: $clr-primary-text;
         }
 
         .meals {
@@ -32,13 +32,13 @@
             column-gap: 64px;
             row-gap: 8px;
 
-            @container meals (max-width: 576px) {
+            @container meals (max-width: 375px) {
                 grid-template-columns: 1fr;
             }
 
             p {
                 text-align: center;
-                color: $white;
+                color: $clr-primary-text;
                 white-space: nowrap;
             }
         }

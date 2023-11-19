@@ -1,6 +1,6 @@
 .header {
     position: relative;
-    z-index: 10;
+    z-index: 9;
     background: linear-gradient(
             to right,
             rgba(96, 160, 216, 0.62),
@@ -13,12 +13,9 @@
     align-content: space-between;
     padding: 24px 48px 48px 48px;
 
-    @media screen and (max-width: 768px) {
-    }
-
     .background-opacity {
         position: absolute;
-        z-index: 9;
+        z-index: 7;
         top: 0;
         left: 0;
         width: 100%;
@@ -26,13 +23,13 @@
     }
 
     .tagline {
-        z-index: 10;
+        z-index: 8;
         position: relative;
         @include display-flex($direction: column);
         gap: 8px;
 
         &__title {
-            color: $white;
+            color: $clr-primary-text;
         }
 
         &__subtitle {
@@ -40,7 +37,7 @@
             right: -20%;
             bottom: -20%;
             rotate: -9deg;
-            color: $white;
+            color: $clr-primary-text;
             font-weight: 500;
 
             @media screen and (max-width: 768px) {
@@ -51,7 +48,7 @@
     }
 
     .socials {
-        z-index: 10;
+        z-index: 8;
         @include display-flex($justify: flex-start);
         gap: 16px;
         align-self: flex-end;
